@@ -1,4 +1,4 @@
-package main
+package Helper
 
 import (
 	"fmt"
@@ -8,6 +8,7 @@ import (
 
 type Help struct{}
 
+//reader file
 func (help *Help) read(namefile string) (string, error) {
 	file, err := os.ReadFile(namefile)
 	var data string
@@ -19,6 +20,7 @@ func (help *Help) read(namefile string) (string, error) {
 	}
 }
 
+//get array strings names methods
 func (help *Help) Dir(absPath string, nameModule string) []string {
 	data, err := help.read(absPath)
 	if err != nil {
@@ -39,6 +41,7 @@ func (help *Help) Dir(absPath string, nameModule string) []string {
 	return list
 }
 
+//get verbose array strings names methods
 func (help *Help) DirVerbose(absPath string, nameModule string) []string {
 	data, err := help.read(absPath)
 	if err != nil {
