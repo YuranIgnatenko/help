@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "Helper"
+	. "help_filego"
 	"fmt"
 )
 
