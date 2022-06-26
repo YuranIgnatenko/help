@@ -1,4 +1,4 @@
-package Helper
+package help_filego
 
 import (
 	"fmt"
